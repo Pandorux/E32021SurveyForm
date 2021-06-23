@@ -4,9 +4,143 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E3 2021 Survey</title>
+    <title>E3 2021 Survey Form</title>
 </head>
+    <header class="header">
+        <h1 id="title">E3 2021 Survey Form</h1>
+        <p id="description"></p>
+    </header>
     <body>
-        
+        <form id="survey-form">
+            <div class="user-details">
+                <div class="form-group">
+                    <label for="name" id="name-label">Name</label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email" id="email-label">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Enter your email">
+                </div>
+
+                <div class="form-group">
+                    <label for="number" id="number-label">Age</label>
+                    <input type="number" name="number" id="number" placeholder="Age">
+                </div>
+
+                <div class="form-group">
+                    <label for="platform" id="platform-label">Which gaming platform do you play on most?</label>
+                    <select name="plaform" id="dropdown">
+                        <option value="Switch">Nintendo Switch</option>
+                        <option value="DS">Nintendo DS</option>
+                        <option value="PS">Playstation</option>
+                        <option value="Xbox">Xbox</option>
+                        <option value="PC">PC</option>
+                        <option value="iOS">iOS</option>
+                        <option value="Android">Android</option>
+                        <option value="XR">VR/AR/MR</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="genre" id="genre-label">Which genre of game do you play the most?</label>
+                    <select name="genre" id="dropdown">
+                        <option value="RPG">RPG</option>
+                        <option value="JRPG">JRPG</option>
+                        <option value="TBS">Turn-Based Strategy</option>
+                        <option value="RTS">Real-Time Strategy</option>
+                        <option value="FPS">FPS</option>
+                        <option value="MMORPG">MMORPG</option>
+                        <option value="MOBA">MOBA</option>
+                        <option value="Platformer">Platformer</option>
+                        <option value="Adventure">Adventure</option>
+                        <option value="Action-Adventure">Action-Adventure</option>
+                        <option value="Simulation">Simulation</option>
+                        <option value="Survival">Survival</option>
+                        <option value="Puzzle">Puzzle</option>
+                        <option value="Dance/Rhythm">Dance/Rhythm</option>
+                        <option value="Shooter">Shooter</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="e3-feedback">
+                <div class="form-group">
+                    <label for="most-anticipated-game" id="most-anticipated-game-dropdown-label">What game shown at E3 are you anticipating the most?</label>
+                    <select name="most-anticipated-game" id="most-anticipated-game-dropdown">
+                        <option value="placeholder">placeholder</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="games-of-interest">What games shown at E3 are you excited for?</label>
+                    <div id="games-of-interest-list">
+                        <div class="form-group">
+                            <input name="placeholder-checkbox" type="checkbox" id="placeholder-checkbox" value="placeholder">
+                            <label for="placeholder-checkbox" id="placeholder-checkbox-label">Placeholder</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="improvements-list">What improvements would you like us to focus on for E3 2022?</label>
+                    <div id="improvements-list">
+                        <div class="form-group">
+                            <input type="checkbox" id="broadcasters">
+                            <label for="broadcasters-checkbox-label">Broadcasters</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="checkbox" id="broadcasting-format">
+                            <label for="broadcasters-checkbox-label">Improved Broadcasting Format</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="checkbox" id="indie-games">
+                            <label for="broadcasters-checkbox-label">More Focus on Indie Games</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="checkbox" id="hardware">
+                            <label for="broadcasters-checkbox-label">More Focus on New Computer & Console Hardware</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="checkbox" id="physcial-location">
+                            <label for="broadcasters-checkbox-label">Physical Location</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="checkbox" id="industry-panels">
+                            <label for="broadcasters-checkbox-label">More Industry Panels</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="checkbox" id="visual-quality">
+                            <label for="broadcasters-checkbox-label">Improved Video Quality</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="checkbox" id="audio-quality">
+                            <label for="broadcasters-checkbox-label">Improved Audio Quality</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="checkbox" id="special-appearances">
+                            <label for="broadcasters-checkbox-label">More Special Appearances</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="suggestions">Any comments or suggestions?</label>
+                    <textarea name="suggestions" id="suggestions" cols="30" rows="10" placeholder="Enter your comment here"></textarea>
+                </div>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
     </body>
 </html>
