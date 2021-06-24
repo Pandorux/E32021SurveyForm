@@ -1,0 +1,48 @@
+
+/* Global Styles */
+
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    text-align: left;
+    line-height: 1.7em;
+    font-weight: 500;
+    background-image: url("images/bg-elden-ring.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0px;
+    padding: 2vh 5vw;
+}
+body, input, textarea, select {
+    font-family: 'Roboto',Helvetica,Arial,Lucida,sans-serif;
+}
+
+h1, p {
+    text-align: center;
+}
+
+label {
+    display: block;
+}
+
+input:not([type="checkbox"]), select, textarea, button[type="submit"] {
+    width: 100%;
+}
+
+/* Header Styles */
+
+/* Form Styles */
+
+form {
+    background-color: white;
+    border-radius: 5px;
+    padding: 7.5vw 5vw;
+}
