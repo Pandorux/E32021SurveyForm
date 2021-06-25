@@ -17,7 +17,7 @@
             </p>
         </header>
         <form id="survey-form">
-            <div class="user-details">
+            <section class="user-details">
                 <div class="form-group-input">
                     <label for="name" id="name-label">Name</label>
                     <input type="text" name="name" id="name" placeholder="Enter your name">
@@ -34,8 +34,9 @@
                 </div>
 
                 <div class="form-group-dropdown">
-                    <label for="platform-dropdown" id="platform-label">Which gaming platform do you play on most?</label>
+                    <label for="platform-dropdown" id="platform-label">Which gaming platform do you play on the most?</label>
                     <select name="plaform-dropdown" id="dropdown">
+                        <option value="" disabled selected>Select a gaming platform</option>
                         <option value="Switch">Nintendo Switch</option>
                         <option value="DS">Nintendo DS</option>
                         <option value="PS">Playstation</option>
@@ -51,6 +52,7 @@
                 <div class="form-group-dropdown">
                     <label for="genre-dropdown" id="genre-label">Which genre of game do you play the most?</label>
                     <select name="genre-dropdown" id="dropdown">
+                        <option value="" disabled selected>Select a game genre</option>
                         <option value="RPG">RPG</option>
                         <option value="JRPG">JRPG</option>
                         <option value="TBS">Turn-Based Strategy</option>
@@ -69,9 +71,9 @@
                         <option value="Other">Other</option>
                     </select>
                 </div>
-            </div>
+            </section>
 
-            <div class="e3-feedback">
+            <section class="e3-feedback">
                 <div class="form-group">
                     <label for="most-anticipated-game-dropdown" id="most-anticipated-game-label">What game shown at E3 are you anticipating the most?</label>
                     <select name="most-anticipated-game-dropdown" id="most-anticipated-game-dropdown">
@@ -93,47 +95,47 @@
                     <label for="improvements-list">What improvements would you like us to focus on for E3 2022?</label>
                     <div id="improvements-list">
                         <div class="form-group-checkbox">
-                            <input type="checkbox" for="" name="broadcasters-checkbox" id="broadcasters-checkbox" value="broadcasters">
+                            <input type="checkbox" for="broadcasters-checkbox" name="broadcasters-checkbox" id="broadcasters-checkbox" value="broadcasters">
                             <label for="broadcasters-checkbox" id="broadcasters-label">Broadcasters</label>
                         </div>
                         
                         <div class="form-group-checkbox">
-                            <input type="checkbox" for="" name="broadcasting-format-checkbox" id="broadcasting-format-checkbox" value="broadcasting-format">
+                            <input type="checkbox" for="broadcasting-format-checkbox" name="broadcasting-format-checkbox" id="broadcasting-format-checkbox" value="broadcasting-format">
                             <label for="broadcasting-format-checkbox" id="broadcasting-format-label">Improved Broadcasting Format</label>
                         </div>
                         
                         <div class="form-group-checkbox">
-                            <input type="checkbox" for="" name="indie-games-checkbox" id="indie-games-checkbox" value="indie-games">
+                            <input type="checkbox" for="indie-games-checkbox" name="indie-games-checkbox" id="indie-games-checkbox" value="indie-games">
                             <label for="indie-games-checkbox" id="indie-games-label">More Focus on Indie Games</label>
                         </div>
                         
                         <div class="form-group-checkbox">
-                            <input type="checkbox" for="" name="hardware-checkbox" id="hardware-checkbox" value="hardware">
-                            <label for="hardware-checkbox" id="hardware-label">More Focus on New Computer & Console Hardware</label>
+                            <input type="checkbox" for="hardware-checkbox" name="hardware-checkbox" id="hardware-checkbox" value="hardware">
+                            <label for="hardware-checkbox" id="hardware-label">More Focus on Computer Hardware</label>
                         </div>
                         
                         <div class="form-group-checkbox">
-                            <input type="checkbox" for="" name="physcial-location-checkbox" id="physcial-location-checkbox" value="physcial-location">
+                            <input type="checkbox" for="physcial-location-checkbox" name="physcial-location-checkbox" id="physcial-location-checkbox" value="physcial-location">
                             <label for="physcial-location-checkbox" id="physcial-location-label">Physical Location</label>
                         </div>
                         
                         <div class="form-group-checkbox">
-                            <input type="checkbox" for="" name="industry-panels-checkbox" id="industry-panels-checkbox" value="industry-panels">
+                            <input type="checkbox" for="industry-panels-checkbox" name="industry-panels-checkbox" id="industry-panels-checkbox" value="industry-panels">
                             <label for="industry-panels-checkbox" id="industry-panels-label">More Industry Panels</label>
                         </div>
                         
                         <div class="form-group-checkbox">
-                            <input type="checkbox" for="" name="visual-quality-checkbox" id="visual-quality-checkbox" value="visual-quality">
+                            <input type="checkbox" for="visual-quality-checkbox" name="visual-quality-checkbox" id="visual-quality-checkbox" value="visual-quality">
                             <label for="visual-quality-checkbox" id="visual-quality-label">Improved Video Quality</label>
                         </div>
                         
                         <div class="form-group-checkbox">
-                            <input type="checkbox" for="" name="audio-quality-checkbox" id="audio-quality-checkbox" value="audio-quality">
+                            <input type="checkbox" for="audio-quality-checkbox" name="audio-quality-checkbox" id="audio-quality-checkbox" value="audio-quality">
                             <label for="audio-quality-checkbox" id="audio-quality-label">Improved Audio Quality</label>
                         </div>
                         
                         <div class="form-group-checkbox">
-                            <input type="checkbox" for="" name="special-appearances-checkbox" id="special-appearances-checkbox" value="special-appearances">
+                            <input type="checkbox" for="special-appearances-checkbox" name="special-appearances-checkbox" id="special-appearances-checkbox" value="special-appearances">
                             <label for="special-appearances-checkbox" id="special-appearances-label">More Special Appearances</label>
                         </div>
                     </div>
@@ -143,9 +145,9 @@
                     <label for="suggestions" id="suggestions-label">Any comments or suggestions?</label>
                     <textarea name="suggestions" id="suggestions" cols="30" rows="10" placeholder="Enter your comment here"></textarea>
                 </div>
-            </div>
 
-            <button type="submit">Submit</button>
+                <button type="submit">Submit</button>
+            </section>
         </form>
     </body>
 </html>

@@ -2,12 +2,13 @@
 /* Global Styles */
 
 html {
-    font-size: 100%;
+    font-size: 20px;
     box-sizing: border-box;
     background-color: black;
 }
 
 *, *::before, *::after {
+    border-style: none;
     box-sizing: inherit;
 }
 
@@ -21,28 +22,58 @@ body {
     margin: 0px;
     padding: 2vh 5vw;
 }
+
 body, input, textarea, select {
     font-family: 'Roboto',Helvetica,Arial,Lucida,sans-serif;
 }
 
+section {
+    padding-bottom: 2em;
+}
+
 h1, p {
+    color: white;
     text-align: center;
 }
 
 label {
-    display: block;
+    font-size: 18px;
+    color: white;
+    display: inline-block;
+    padding-bottom: 5px;
 }
 
 input:not([type="checkbox"]), select, textarea, button[type="submit"] {
+    border-radius: 5px;
     width: 100%;
+    padding: 1em;
 }
-
-/* Header Styles */
 
 /* Form Styles */
 
 form {
-    background-color: white;
+    background-color: rgba(51, 68, 74, 0.8);
     border-radius: 5px;
     padding: 7.5vw 5vw;
+}
+
+[class*="form-group"]:not([class="form-group-checkbox"]) {
+    padding-bottom: 1.4em;
+}
+
+button[type="submit"] {
+    background-color: rgb(232, 72, 45);
+}
+
+input[type="checkbox"] {
+    
+}
+
+.form-group-checkbox label {
+    font-size: 18px;
+}
+
+textarea {
+    min-height: 180px;
+    resize: vertical;
 }
