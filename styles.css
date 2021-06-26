@@ -43,7 +43,7 @@ label {
     padding-bottom: 5px;
 }
 
-input:not([type="checkbox"]), select, textarea, button[type="submit"] {
+input:not([type="checkbox"]):not([type="radio"]), select, textarea, button[type="submit"] {
     border-radius: 5px;
     width: 100%;
     padding: 1em;
@@ -57,7 +57,7 @@ form {
     padding: 7.5vw 5vw;
 }
 
-[class*="form-group"]:not([class="form-group-checkbox"]) {
+[class*="form-group"]:not([class="form-group-checkbox"]):not([class="form-group-radio"]) {
     padding-bottom: 1.4em;
 }
 
@@ -65,11 +65,7 @@ button[type="submit"] {
     background-color: rgb(232, 72, 45);
 }
 
-input[type="checkbox"] {
-    
-}
-
-.form-group-checkbox label {
+.form-group-checkbox label, .form-group-radio label {
     font-size: 18px;
 }
 
