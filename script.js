@@ -28,8 +28,32 @@ const gamesOfInterest = [
     "Other"
 ]
 
-function helloWorld() {
-    console.log("Hello World");
+const bgIndex = 0;
+const bgPosIndex_00 = 1;
+const bgPosIndex_01 = 2;
+
+const backgroundImages = [
+    ["images/bg-elden-ring.jpg", "center", "center"],
+    ["images/bg-far-cry.jpg", "center", "center"],
+    ["images/bg-life-is-strange.jpg", "right", "center"],
+    ["images/bg-slime-rancher.jpg", "left", "center"]
+    ["images/bg-solar-ash.jpg", "right", "bottom"]
+]
+
+// Is this a JS Lambda? I think so
+const random = (min = 0, max = 50) => {
+    let num = Math.random() * (max - min) + min;
+
+    return Math.round(num);
+};
+
+function setRandomBackground() {
+    const body = document.body;
+    const index = random(1, backgroundImages.length);
+    const bg = backgroundImages[index][bgIndex];
+
+    body.style.backgroundImage = `url('${bg}')`;
+    body.style.backgroundPosition = `${backgroundImages[index][bgPosIndex_00]} ${backgroundImages[index][bgPosIndex_01]}`;
 }
 
 function populateDropdown(listOfOptions, targetElementId) {

@@ -8,6 +8,11 @@
         <title>E3 2021 Survey Form</title>
     </head>
     <body>
+        <script type="text/javascript" src="script.js"></script>
+        <script>
+            setRandomBackground();
+        </script>
+
         <header class="header">
             <h1 id="title">E3 2021 Survey Form</h1>
             <p id="description">
@@ -16,6 +21,7 @@
                 </i>
             </p>
         </header>
+
         <form id="survey-form">
             <section class="user-details">
                 <div class="form-group-input">
@@ -100,7 +106,6 @@
                     <label for="most-anticipated-game-dropdown" id="most-anticipated-game-label">What game shown at E3 are you anticipating the most?</label>
                     <select name="most-anticipated-game-dropdown" id="most-anticipated-game-dropdown">
                         <option value="" disabled selected>Select a game</option>
-                        <script type="text/javascript" src="script.js"></script>
                         <script>
                             populateDropdown(gamesOfInterest, "most-anticipated-game-dropdown");
                         </script>
