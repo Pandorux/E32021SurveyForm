@@ -16,7 +16,8 @@ body {
     text-align: left;
     line-height: 1.7em;
     font-weight: 500;
-    background-size: cover;
+    background-size: max(auto, 100vw) 100vh;
+    background-attachment: fixed;
     background-repeat: no-repeat;
     margin: 0px;
     padding: 2vh 5vw;

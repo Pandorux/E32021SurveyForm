@@ -31,7 +31,7 @@ const gamesOfInterest = [
 const backgroundImages = [
     backgroundImage = {
         image: "images/bg-elden-ring.jpg",
-        horizontalPos: "center",
+        horizontalPos: "60%",
         verticalPos: "center"
     },
     backgroundImage = {
@@ -41,17 +41,17 @@ const backgroundImages = [
     },
     backgroundImage = {
         image: "images/bg-life-is-strange.jpg",
-        horizontalPos: "right",
+        horizontalPos: "62.5%",
         verticalPos: "center"
     },
     backgroundImage = {
-        image: "images/bg-slime-rancher.jpg",
-        horizontalPos: "left",
-        verticalPos: "center"
+        image: "images/bg-battlefield.jpg",
+        horizontalPos: "center",
+        verticalPos: "top"
     },
     backgroundImage = {
         image: "images/bg-solar-ash.jpg",
-        horizontalPos: "right",
+        horizontalPos: "85%",
         verticalPos: "bottom"
     }
 ]
@@ -65,7 +65,7 @@ const random = (min = 0, max = 50) => {
 
 function setRandomBackground() {
 
-    backgroundImages.forEach(backgroundImage => console.log(backgroundImage.image));
+    // backgroundImages.forEach(backgroundImage => console.log(backgroundImage.image));
 
     const body = document.body;
     const bgIndex = random(0, backgroundImages.length - 1);
@@ -76,7 +76,7 @@ function setRandomBackground() {
 
 function populateDropdown(listOfOptions, targetElementId) {
 
-    console.log(`Started Populating Dropdown ${targetElementId}`);
+    // console.log(`Started Populating Dropdown ${targetElementId}`);
     const dropdown = document.getElementById(targetElementId);
 
     for(i = 0; i < listOfOptions.length; i++) {
@@ -85,22 +85,22 @@ function populateDropdown(listOfOptions, targetElementId) {
         opt.setAttribute("value", `${listOfOptions[i]}`);
         dropdown.appendChild(opt);
 
-        console.log(`Option ${listOfOptions[i]} appended to ${targetElementId}`);
+        // console.log(`Option ${listOfOptions[i]} appended to ${targetElementId}`);
     }
 
-    console.log(`Finished Populating Dropdown ${targetElementId}`);
+    // console.log(`Finished Populating Dropdown ${targetElementId}`);
 }
 
 function populateCheckboxList(listOfOptions, targetElementId) {
 
-    console.log(`Started Populating Checkbox List ${targetElementId}`);
+    // console.log(`Started Populating Checkbox List ${targetElementId}`);
     const checkboxList = document.getElementById(targetElementId);
 
     for(i = 0; i < listOfOptions.length; i++) {
         createCheckboxFormGroup(listOfOptions[i], targetElementId);
     }
 
-    console.log(`Finished Populating Checkbox List ${targetElementId}`);
+    // console.log(`Finished Populating Checkbox List ${targetElementId}`);
 }
 
 function createCheckboxFormGroup(checkboxValue, parentElementId) {
@@ -125,5 +125,5 @@ function createCheckboxFormGroup(checkboxValue, parentElementId) {
     div.appendChild(label);
     parent.appendChild(div);
 
-    console.log(`Appended form-group-checkbox div content to ${parentElementId}`);
+    // console.log(`Appended form-group-checkbox div content to ${parentElementId}`);
 }
