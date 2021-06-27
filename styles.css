@@ -26,13 +26,18 @@ body, input, textarea, select {
     font-family: 'Roboto',Helvetica,Arial,Lucida,sans-serif;
 }
 
-section {
-    padding-bottom: 2em;
-}
-
 h1, p {
     color: white;
     text-align: center;
+    text-shadow:
+        0.05em 0 black,
+        0 0.05em black,
+        -0.05em 0 black,
+        0 -0.05em black,
+        -0.05em -0.05em black,
+        -0.05em 0.05em black,
+        0.05em -0.05em black,
+        0.05em 0.05em black;
 }
 
 label {
@@ -53,7 +58,7 @@ input:not([type="checkbox"]):not([type="radio"]), select, textarea, button[type=
 form {
     background-color: rgba(51, 68, 74, 0.8);
     border-radius: 5px;
-    padding: 7.5vw 5vw;
+    padding: min(7.5vw, 30px) min(5vw, 30px);
     max-width: 800px;
     margin: auto;
 }
@@ -62,15 +67,27 @@ form {
     padding-bottom: 1.4em;
 }
 
-button[type="submit"] {
-    background-color: rgb(232, 72, 45);
+input[type="checkbox"], input[type="radio"] {
+    margin-right: 10px;
+    transform: scale(1.5);
 }
 
-.form-group-checkbox label, .form-group-radio label {
+.form-group-checkbox, .form-group-radio {
     font-size: 18px;
+    padding-bottom: 0px;
+    margin-bottom: -7.5px;
+    margin-right: 5px;
 }
 
 textarea {
     min-height: 180px;
     resize: vertical;
+}
+
+button[type="submit"] {
+    background-color: rgb(232, 72, 45);
+}
+
+button[type="submit"]:hover {
+    background-color: rgb(102, 204, 204);
 }

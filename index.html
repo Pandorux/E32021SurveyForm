@@ -26,22 +26,22 @@
             <section class="user-details">
                 <div class="form-group-input">
                     <label for="name" id="name-label">Name</label>
-                    <input type="text" name="name" id="name" placeholder="Enter your name">
+                    <input type="text" name="name" id="name" placeholder="Enter your name" required>
                 </div>
 
                 <div class="form-group-input">
                     <label for="email" id="email-label">Email</label>
-                    <input type="email" name="email" id="email" placeholder="Enter your email">
+                    <input type="email" name="email" id="email" placeholder="Enter your email" required>
                 </div>
 
                 <div class="form-group-input">
                     <label for="number" id="number-label">Age</label>
-                    <input type="number" name="number" id="number" placeholder="Age">
+                    <input type="number" name="number" id="number" placeholder="Age" min="10" max="100">
                 </div>
 
                 <div class="form-group-dropdown">
                     <label for="platform-dropdown" id="platform-label">Which gaming platform do you play on the most?</label>
-                    <select name="plaform-dropdown" id="dropdown">
+                    <select name="plaform-dropdown" id="dropdown" required>
                         <option value="" disabled selected>Select a gaming platform</option>
                         <option value="Switch">Nintendo Switch</option>
                         <option value="DS">Nintendo DS</option>
@@ -57,7 +57,7 @@
 
                 <div class="form-group-dropdown">
                     <label for="genre-dropdown" id="genre-label">Which genre of game do you play the most?</label>
-                    <select name="genre-dropdown" id="dropdown">
+                    <select name="genre-dropdown" id="dropdown" required>
                         <option value="" disabled selected>Select a game genre</option>
                         <option value="RPG">RPG</option>
                         <option value="JRPG">JRPG</option>
@@ -104,7 +104,7 @@
 
                 <div class="form-group">
                     <label for="most-anticipated-game-dropdown" id="most-anticipated-game-label">What game shown at E3 are you anticipating the most?</label>
-                    <select name="most-anticipated-game-dropdown" id="most-anticipated-game-dropdown">
+                    <select name="most-anticipated-game-dropdown" id="most-anticipated-game-dropdown" required>
                         <option value="" disabled selected>Select a game</option>
                         <script>
                             populateDropdown(gamesOfInterest, "most-anticipated-game-dropdown");
@@ -176,7 +176,7 @@
                     <textarea name="suggestions" id="suggestions" cols="30" rows="10" placeholder="Enter your comment here"></textarea>
                 </div>
 
-                <button type="submit">Submit</button>
+                <button type="submit" id="submit">Submit</button>
             </section>
         </form>
     </body>
