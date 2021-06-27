@@ -28,16 +28,32 @@ const gamesOfInterest = [
     "Other"
 ]
 
-const bgIndex = 0;
-const bgPosIndex_00 = 1;
-const bgPosIndex_01 = 2;
-
 const backgroundImages = [
-    ["images/bg-elden-ring.jpg", "center", "center"],
-    ["images/bg-far-cry.jpg", "center", "center"],
-    ["images/bg-life-is-strange.jpg", "right", "center"],
-    ["images/bg-slime-rancher.jpg", "left", "center"]
-    ["images/bg-solar-ash.jpg", "right", "bottom"]
+    backgroundImage = {
+        image: "images/bg-elden-ring.jpg",
+        horizontalPos: "center",
+        verticalPos: "center"
+    },
+    backgroundImage = {
+        image: "images/bg-far-cry.jpg",
+        horizontalPos: "center",
+        verticalPos: "center"
+    },
+    backgroundImage = {
+        image: "images/bg-life-is-strange.jpg",
+        horizontalPos: "right",
+        verticalPos: "center"
+    },
+    backgroundImage = {
+        image: "images/bg-slime-rancher.jpg",
+        horizontalPos: "left",
+        verticalPos: "center"
+    },
+    backgroundImage = {
+        image: "images/bg-solar-ash.jpg",
+        horizontalPos: "right",
+        verticalPos: "bottom"
+    }
 ]
 
 // Is this a JS Lambda? I think so
@@ -48,12 +64,14 @@ const random = (min = 0, max = 50) => {
 };
 
 function setRandomBackground() {
-    const body = document.body;
-    const index = random(1, backgroundImages.length);
-    const bg = backgroundImages[index][bgIndex];
 
-    body.style.backgroundImage = `url('${bg}')`;
-    body.style.backgroundPosition = `${backgroundImages[index][bgPosIndex_00]} ${backgroundImages[index][bgPosIndex_01]}`;
+    backgroundImages.forEach(backgroundImage => console.log(backgroundImage.image));
+
+    const body = document.body;
+    const bgIndex = random(0, backgroundImages.length - 1);
+
+    body.style.backgroundImage = `url('${backgroundImages[bgIndex].image}')`;
+    body.style.backgroundPosition = `${backgroundImages[bgIndex].horizontalPos} ${backgroundImages[bgIndex].verticalPos}`;
 }
 
 function populateDropdown(listOfOptions, targetElementId) {

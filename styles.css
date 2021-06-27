@@ -54,6 +54,8 @@ form {
     background-color: rgba(51, 68, 74, 0.8);
     border-radius: 5px;
     padding: 7.5vw 5vw;
+    max-width: 800px;
+    margin: auto;
 }
 
 [class*="form-group"]:not([class="form-group-checkbox"]):not([class="form-group-radio"]) {
